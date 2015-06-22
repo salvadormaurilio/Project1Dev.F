@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="music_array">
+        <item>Chose your music provider</item>
+        <item>Chose your music provider</item>
+        <item>Chose your music provider</item>
+        <item>Chose your music provider</item>
+        <item>Chose your music provider</item>
+    </string-array>
+    <string-array name="icon_array">
+        <item>Chose an icon</item>
+        <item>Chose an icon</item>
+        <item>Chose an icon</item>
+        <item>Chose an icon</item>
+        <item>Chose an icon</item>
+    </string-array>
+</resources>

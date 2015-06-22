@@ -8,4 +8,15 @@
     <string name="text_hint_password">Password</string>
     <string name="text_btn_creat_acount">Create an Account</string>
     <string name="forgot_password">I forgot password?</string>
+    <string name="title_whatsong">WhatSong</string>
+    <string name="text_name_shorcount">Name yout shorcout</string>
+    <string name="text_acesse_e_visualize">Accesse a visualize suas informacoes</string>
+    <string name="text_checkbox_minha_conta">Lembra estabelecimiento e nome de usuario</string>
+    <string name="text_hint_num_estable">N° estabelecimiento comercial</string>
+    <string name="text_hint_nome_usuario">Nome de usuario</string>
+    <string name="text_hint_senha">Senha</string>
+    <string name="text_btn_enter">ENTRAR</string>
+    <string name="text_esqueci_senha">ESQUECI A SENHA</string>
+    <string name="text_esqueci_usuario">ESQUECI O NOME DE USUARIO</string>
+
 </resources>
