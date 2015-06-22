@@ -19,7 +19,7 @@
 
     </style>
 
-
+    <!--Tema para la  los dos primeros ejercios-->
     <style name="AppTheme.Transparent" parent="AppTheme.Base">
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
@@ -27,6 +27,7 @@
         <!--<item name="android:windowTranslucentNavigation" tools:targetApi="19">true</item>-->
     </style>
 
+    <!--Tema para la  pantalla de Minha Conta-->
     <style name="AppTheme.Minha_conta" parent="AppTheme.Base">
         <item name="colorAccent">@color/primary</item>
         <item name="android:textColorPrimary">@color/primary_text_black</item>

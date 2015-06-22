@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //añadir el metodo para la pantalla de What Song
     private void createSpinnersWhatsong() {
         Spinner spinnerMusicProvider = (Spinner) findViewById(R.id.spinnerMusicProvider);
         ArrayAdapter<CharSequence> adapterrMusicProvider = ArrayAdapter.createFromResource(this,
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         spinnerIcon.setAdapter(adapterIcon);
     }
 
+//    añadir el metodo para la pantalla de Minha Conta
     private void initializeActionBarMinhaConta() {
         getSupportActionBar().setHomeAsUpIndicator(R.mipmap.ic_menu_white_24dp);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
