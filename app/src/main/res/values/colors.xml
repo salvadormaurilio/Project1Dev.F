@@ -3,7 +3,7 @@
     <color name="primary">#2196F3</color>
     <color name="primary_dark">#1976D2</color>
     <color name="primary_light">#BBDEFB</color>
-    <color name="accent">#FF5252</color>
+    <color name="accent_red">#FF5252</color>
     <color name="primary_text">#ffffff</color>
     <color name="secondary_text">#b2FFFFFF</color>
 
@@ -11,7 +11,7 @@
     <color name="icons">#FFFFFF</color>
     <color name="blur">#bf2196f3</color>
     <color name="green_btn">#4CAF50</color>
-    <color name="grees_press_btn">#388E3C</color>
+    <color name="green_press_btn">#388E3C</color>
     <color name="floatingButoon">#04B8CF</color>
     <color name="text_color_minha_conta">#B6B6B6</color>
 
@@ -20,5 +20,6 @@
     <color name="divider_black">#b6b6b6</color>
     <color name="back_btn_enter">#441FA4</color>
     <color name="back_btn_press_enter">#3d1e84</color>
+    <color name="accent_red_press">#D50000</color>
 
 </resources>

@@ -5,4 +5,5 @@
     <dimen name="margin_edittext_login">16dp</dimen>
     <dimen name="paddin_edittext_login">16dp</dimen>
     <dimen name="radius_buttons">4dp</dimen>
+    <dimen name="margin_btween_elments">4dp</dimen>
 </resources>

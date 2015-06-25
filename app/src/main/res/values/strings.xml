@@ -18,5 +18,18 @@
     <string name="text_btn_enter">ENTRAR</string>
     <string name="text_esqueci_senha">ESQUECI A SENHA</string>
     <string name="text_esqueci_usuario">ESQUECI O NOME DE USUARIO</string>
+    <string name="title_activity_form">FormActivity</string>
+    <string name="text_message_forgot_password">Forgot Password</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="text_btn_login">Login</string>
+    <string name="text_message_full_fields">Favor de llenar todos los campos</string>
+    <string name="text_home">Home</string>
+    <string name="text_hint_fist_name">First Name</string>
+    <string name="text_hint_last_name">Last Name</string>
+    <string name="text_hint_confirm_password">Corfirm Password</string>
+    <string name="text_hint_phone_number">Phone Nummber</string>
+    <string name="text_hint_email_adress">Email Adress</string>
+    <string name="text_strong">Strong</string>
+    <string name="text_raading">Reading</string>
 
 </resources>

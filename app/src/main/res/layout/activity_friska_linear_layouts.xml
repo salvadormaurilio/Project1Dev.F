@@ -69,6 +69,7 @@
         </android.support.design.widget.TextInputLayout>
 
         <TextView
+            android:id="@+id/textViewForgotPassword"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -77,8 +78,18 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textStyle="bold" />
 
+
         <Button
-            android:id="@+id/button"
+            android:id="@+id/buttonLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_btn_login"
+            android:padding="24dp"
+            android:text="@string/text_btn_login" />
+
+
+        <Button
+            android:id="@+id/buttonCreateAccount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/background_btn_create_count"
