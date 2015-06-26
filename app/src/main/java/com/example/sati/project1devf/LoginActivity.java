@@ -1,6 +1,7 @@
 package com.example.sati.project1devf;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -41,7 +42,8 @@ public class LoginActivity extends AppCompatActivity {
 
         switch (view.getId()) {
             case R.id.textViewForgotPassword:
-                Toast.makeText(LoginActivity.this, R.string.text_message_forgot_password, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(LoginActivity.this, R.string.text_message_forgot_password, Toast.LENGTH_SHORT).show();
+                launchAction();
                 break;
             case R.id.buttonLogin:
                 isFullFields();
@@ -62,22 +64,34 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void launchHomeActivity() {
-        try{
+        try {
             Intent homeActivity = HomeActivity.provideIntent(this,
                     editTextUserName.getText().toString(),
                     editTextPassword.getText().toString());
 
             startActivity(homeActivity);
-        }catch (IllegalArgumentException e){
+        } catch (IllegalArgumentException e) {
             e.printStackTrace();
         }
     }
 
     /**
      * @param myClass Clase que hereda de {@link android.app.Activity}
-     * */
+     */
     private void launchActivity(Class myClass) {
         Intent intent = new Intent(LoginActivity.this, myClass);
+        startActivity(intent);
+    }
+
+
+    private void launchAction() {
+
+//        Uri uri = Uri.parse("http://developer.android.com/");
+//        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+
+        Uri uri = Uri.parse("tel:555-555-555");
+        Intent intent = new Intent(Intent.ACTION_CALL, uri);
+
         startActivity(intent);
     }
 

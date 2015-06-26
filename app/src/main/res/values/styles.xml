@@ -36,6 +36,10 @@
         <item name="android:textColorHint">@color/divider_black</item>
     </style>
 
+    <style name="MyTheme" parent="Base.TextAppearance.AppCompat.Button">
+        <item name="android:background">@drawable/background_btn_enter</item>
+        <item name="android:textColor">@color/divider_black</item>
+    </style>
 
 
     <!--Tema para la  pantalla de Minha Conta-->
