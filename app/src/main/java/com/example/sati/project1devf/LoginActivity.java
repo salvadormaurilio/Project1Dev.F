@@ -15,9 +15,9 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
-    public static final String LOG_TAG = MainActivity.class.getName();
+    public static final String LOG_TAG = LoginActivity.class.getName();
 
     @InjectView(R.id.editTextUserName)
     EditText editTextUserName;
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
         switch (view.getId()) {
             case R.id.textViewForgotPassword:
-                Toast.makeText(MainActivity.this, R.string.text_message_forgot_password, Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, R.string.text_message_forgot_password, Toast.LENGTH_SHORT).show();
                 break;
             case R.id.buttonLogin:
                 isFullFields();
@@ -55,14 +55,29 @@ public class MainActivity extends AppCompatActivity {
     private void isFullFields() {
 
         if (!TextUtils.isEmpty(editTextUserName.getText()) && !TextUtils.isEmpty(editTextPassword.getText())) {
-            launchActivity(HomeActivity.class);
+            launchHomeActivity();
         } else {
-            Toast.makeText(MainActivity.this, R.string.text_message_full_fields, Toast.LENGTH_SHORT).show();
+            Toast.makeText(LoginActivity.this, R.string.text_message_full_fields, Toast.LENGTH_SHORT).show();
         }
     }
 
+    private void launchHomeActivity() {
+        try{
+            Intent homeActivity = HomeActivity.provideIntent(this,
+                    editTextUserName.getText().toString(),
+                    editTextPassword.getText().toString());
+
+            startActivity(homeActivity);
+        }catch (IllegalArgumentException e){
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * @param myClass Clase que hereda de {@link android.app.Activity}
+     * */
     private void launchActivity(Class myClass) {
-        Intent intent = new Intent(MainActivity.this, myClass);
+        Intent intent = new Intent(LoginActivity.this, myClass);
         startActivity(intent);
     }
 

@@ -1,37 +1,55 @@
 package com.example.sati.project1devf;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
+
+import com.example.sati.project1devf.cutomviews.Constants;
 
 public class HomeActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        showUserData();
+
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_home, menu);
-        return true;
+    private void showUserData(){
+        Toast.makeText(this, obtainUsernameFromExtras() + " " + obtainPasswordFromExtras(), Toast.LENGTH_SHORT).show();
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+    private String obtainUsernameFromExtras() {
+        return getIntent().getStringExtra(Constants.EXTRA_USERNAME);
+    }
 
-        return super.onOptionsItemSelected(item);
+
+    private String obtainPasswordFromExtras() {
+        return getIntent().getStringExtra(Constants.EXTRA_PASSWORD);
+    }
+
+
+    /**
+     * Este metodo provee un intent para lanzar {@link HomeActivity}
+     *
+     * @param from Contexto desde donde se va a lanzar {@link HomeActivity}
+     * @param params Arreglo de strings, el cual deberá contener el username y el password
+     * */
+    public static Intent provideIntent(Context from, String... params) throws IllegalArgumentException{
+
+        if(params.length != 2)
+            throw new IllegalArgumentException("Los parametros deben ser dos: username y password");
+
+        Intent homeIntent = new Intent(from, HomeActivity.class);
+        homeIntent.putExtra("username",params[0]);
+        homeIntent.putExtra("password",params[1]);
+
+        return homeIntent;
     }
 }
